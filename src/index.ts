@@ -27,4 +27,4 @@ app.post("/", (req: Request , res:Response) => {
     res.send('dgdfgd')
 })
 app.use("/",route);
-app.listen(3000, () => console.log("app listen localhost 3000"))
+app.listen(process.env.PORT, () => console.log("app listen localhost 3000"))
