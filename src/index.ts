@@ -7,6 +7,8 @@ import sessions from 'express-session';
 
 const app:Application = express();
 
+const PORT = process.env.PORT || 3000
+
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser());
 const oneDay = 1000 * 60 * 60 * 24;
@@ -27,4 +29,4 @@ app.post("/", (req: Request , res:Response) => {
     res.send('dgdfgd')
 })
 app.use("/",route);
-app.listen(process.env.PORT, () => console.log("app listen localhost 3000"))
+app.listen(PORT, () => console.log("app listen localhost 3000"))
