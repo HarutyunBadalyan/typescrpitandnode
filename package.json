@@ -1,0 +1,28 @@
+{
+  "name": "typesciptandnodeotherfile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && cd build && node index.js",
+    "dev": "tsnd --respawn ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@bamblehorse/tiny": "^2.0.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.18",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.15"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.2",
+    "@types/express-session": "^1.17.4",
+    "ts-node-dev": "^1.1.8"
+  }
+}
