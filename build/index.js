@@ -8,6 +8,8 @@ const route_1 = __importDefault(require("./router/route"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const express_session_1 = __importDefault(require("express-session"));
 const app = (0, express_1.default)();
+const PORT = process.env.PORT || 3000;
+console.log("PORT", process.env.PORT);
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, cookie_parser_1.default)());
 const oneDay = 1000 * 60 * 60 * 24;
@@ -26,4 +28,4 @@ app.post("/", (req, res) => {
     res.send('dgdfgd');
 });
 app.use("/", route_1.default);
-app.listen(3000, () => console.log("app listen localhost 3000"));
+app.listen(PORT, () => console.log("app listen localhost 3000"));

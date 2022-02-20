@@ -8,7 +8,7 @@ import sessions from 'express-session';
 const app:Application = express();
 
 const PORT = process.env.PORT || 3000
-
+console.log("PORT",process.env.PORT)
 app.use(express.urlencoded({extended:true}))
 app.use(cookieParser());
 const oneDay = 1000 * 60 * 60 * 24;
