@@ -3,7 +3,7 @@
  * @returns {string}
  */
 function jscout() {
-  return "jscout";
+  return 'jscout';
 }
 function jsReturnTwo() {
   return 2;
