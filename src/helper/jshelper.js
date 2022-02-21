@@ -1,4 +1,11 @@
+/**
+ *
+ * @returns {string}
+ */
 function jscout() {
-    console.log("jscout")
+  return "jscout";
 }
-module.exports = jscout;
+function jsReturnTwo() {
+  return 2;
+}
+module.exports = { jscout, jsReturnTwo };
