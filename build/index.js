@@ -1,9 +1,9 @@
 'use strict';
 var __importDefault =
-  (this && this.__importDefault) ||
-  function (mod) {
-    return mod && mod.__esModule ? mod : { default: mod };
-  };
+    (this && this.__importDefault) ||
+    function (mod) {
+        return mod && mod.__esModule ? mod : { default: mod };
+    };
 Object.defineProperty(exports, '__esModule', { value: true });
 const express_1 = __importDefault(require('express'));
 const route_1 = __importDefault(require('./router/route'));
@@ -16,26 +16,26 @@ app.use(express_1.default.urlencoded({ extended: true }));
 app.use((0, cookie_parser_1.default)());
 const oneDay = 1000 * 60 * 60 * 24;
 app.use(
-  (0, express_session_1.default)({
-    secret: 'thisismysecrctekeyfhrgfgrfrty84fwir767',
-    saveUninitialized: true,
-    cookie: { maxAge: oneDay, secure: true },
-    name: 'sdfsdfsd',
-    resave: false,
-  })
+    (0, express_session_1.default)({
+        secret: 'thisismysecrctekeyfhrgfgrfrty84fwir767',
+        saveUninitialized: true,
+        cookie: { maxAge: oneDay, secure: true },
+        name: 'sdfsdfsd',
+        resave: false,
+    })
 );
 function middleware(req, res, next) {
-  console.log('middleware');
-  next();
+    console.log('middleware');
+    next();
 }
 app.get('/', middleware, (req, res) => {
-  req.session.userId = 'sdfsfsdf';
-  console.log(req.session);
-  res.send('dsfsdfsd');
+    req.session.userId = 'sdfsfsdf';
+    console.log(req.session);
+    res.send('dsfsdfsd');
 });
 app.post('/', (req, res) => {
-  console.log(req.body.name);
-  res.send('dgdfgd');
+    console.log(req.body.name);
+    res.send('dgdfgd');
 });
 app.use('/', route_1.default);
 app.listen(PORT, () => console.log(`app listen localhost ${PORT}`));

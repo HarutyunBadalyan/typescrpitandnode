@@ -3,9 +3,9 @@
  * @returns {string}
  */
 function jscout() {
-  return 'jscout';
+    return 'jscout';
 }
 function jsReturnTwo() {
-  return 2;
+    return 2;
 }
 module.exports = { jscout, jsReturnTwo };
