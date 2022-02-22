@@ -10,4 +10,6 @@ someThingRoute.get('/something', (req: Request | any, res: Response | any) => {
     res.send('something');
 });
 console.log("dev")
+console.log("dev")
+
 export default someThingRoute;
