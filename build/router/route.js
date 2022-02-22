@@ -1,15 +1,13 @@
-'use strict';
-var __importDefault =
-    (this && this.__importDefault) ||
-    function (mod) {
-        return mod && mod.__esModule ? mod : { default: mod };
-    };
-Object.defineProperty(exports, '__esModule', { value: true });
-const express_1 = __importDefault(require('express'));
-const helper_1 = __importDefault(require('../helper/helper'));
-const jshelper_1 = require('../helper/jshelper');
-const tiny_1 = __importDefault(require('@bamblehorse/tiny'));
-const some_json_1 = __importDefault(require('./some.json'));
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const helper_1 = __importDefault(require("../helper/helper"));
+const jshelper_1 = require("../helper/jshelper");
+const tiny_1 = __importDefault(require("@bamblehorse/tiny"));
+const some_json_1 = __importDefault(require("./some.json"));
 const route = express_1.default.Router();
 route.get('/about', (req, res) => {
     console.log('session', req.session.userId);

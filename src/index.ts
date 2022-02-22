@@ -4,6 +4,7 @@ import route from './router/route';
 
 import cookieParser from 'cookie-parser';
 import sessions from 'express-session';
+import someThingRoute from './router/somethingroute';
 
 const app: Application = express();
 
@@ -36,4 +37,5 @@ app.post('/', (req: Request, res: Response) => {
     res.send('dgdfgd');
 });
 app.use('/', route);
+app.use("/",someThingRoute)
 app.listen(PORT, () => console.log(`app listen localhost ${PORT}`));
