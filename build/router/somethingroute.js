@@ -13,4 +13,6 @@ someThingRoute.get('/something', (req, res) => {
     console.log("something 3");
     res.send('something');
 });
+console.log("dev");
+console.log("dev");
 exports.default = someThingRoute;
