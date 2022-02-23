@@ -12,7 +12,7 @@ const app: Application = express();
 const PORT = process.env.PORT || 3000;
 console.log('PORT', process.env.PORT);
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join('../','public')))
+app.use(express.static(path.join(__dirname,'../','public')))
 app.use(cookieParser());
 const oneDay = 1000 * 60 * 60 * 24;
 app.use(
