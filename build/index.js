@@ -8,8 +8,12 @@ const route_1 = __importDefault(require("./router/route"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const express_session_1 = __importDefault(require("express-session"));
 const somethingroute_1 = __importDefault(require("./router/somethingroute"));
-const path_1 = __importDefault(require("path"));
+
+require("dotenv/config");
+const database_1 = require("./database/database");
+
 const app = (0, express_1.default)();
+console.log(process.env.some);
 const PORT = process.env.PORT || 3000;
 console.log('PORT', process.env.PORT);
 app.use(express_1.default.urlencoded({ extended: true }));
@@ -30,6 +34,7 @@ function middleware(req, res, next) {
 app.get('/', middleware, (req, res) => {
     req.session.userId = 'sdfsfsdf';
     console.log(req.session);
+    database_1.TypeUser.create({ name: "dsfsdfsdf" }).then(r => console.log(r)).catch(e => console.warn(e));
     res.send('dsfsdfsd');
 });
 app.post('/', (req, res) => {
