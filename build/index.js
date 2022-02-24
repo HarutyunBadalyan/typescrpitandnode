@@ -8,10 +8,9 @@ const route_1 = __importDefault(require("./router/route"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
 const express_session_1 = __importDefault(require("express-session"));
 const somethingroute_1 = __importDefault(require("./router/somethingroute"));
-
 require("dotenv/config");
 const database_1 = require("./database/database");
-
+const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 console.log(process.env.some);
 const PORT = process.env.PORT || 3000;
