@@ -5,9 +5,11 @@ import route from './router/route';
 import cookieParser from 'cookie-parser';
 import sessions from 'express-session';
 import someThingRoute from './router/somethingroute';
+import 'dotenv/config'
+import {TypeUser} from "./database/database"
 
 const app: Application = express();
-
+console.log(process.env.some)
 const PORT = process.env.PORT || 3000;
 console.log('PORT', process.env.PORT);
 app.use(express.urlencoded({ extended: true }));
@@ -30,6 +32,7 @@ function middleware(req: Request, res: Response, next: NextFunction) {
 app.get('/', middleware, (req: Request, res: Response) => {
     req.session.userId = 'sdfsfsdf';
     console.log(req.session);
+    TypeUser.create({name:"dsfsdfsdf"}).then(r => console.log(r)).catch(e => console.warn(e))
     res.send('dsfsdfsd');
 });
 app.post('/', (req: Request, res: Response) => {
