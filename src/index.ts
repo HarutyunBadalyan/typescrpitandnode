@@ -5,10 +5,9 @@ import route from './router/route';
 import cookieParser from 'cookie-parser';
 import sessions from 'express-session';
 import someThingRoute from './router/somethingroute';
-
 import 'dotenv/config'
 import {TypeUser} from "./database/database"
-
+//import './@types/express-session'
 import path from 'path';
 
 

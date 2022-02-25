@@ -28,6 +28,7 @@
   "devDependencies": {
     "@types/cookie-parser": "^1.4.2",
     "@types/express-session": "^1.17.4",
+    "@types/validator": "^13.7.1",
     "ts-node-dev": "^1.1.8"
   }
 }
